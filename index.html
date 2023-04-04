@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Meu cenário A-Frame</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+	</head>
+	<body>
+		<a-scene>
+			<!-- Sol -->
+			<a-sphere
+				color="#FDB813"
+				radius="50"
+				position="60 400 -340"
+				material="src: texture/sun.jpg;"
+			></a-sphere>
+
+			<!-- Chão -->
+			<a-plane
+				color="#00ff00"
+				height="200"
+				width="200"
+				rotation="-90 0 0"
+				position="0 0 0"
+				material="src: texture/grama.jpg;"
+			></a-plane>
+
+			<!-- Árvore -->
+			<a-cylinder
+				color="#8B4513"
+				height="4"
+				radius="0.5"
+				position="-7 2 -10"
+			></a-cylinder>
+			<a-cone
+				color="#00FF00"
+				height="3"
+				radius-bottom="3"
+				position="-7 5 -10"
+			></a-cone>
+
+			<a-cylinder
+				color="#8B4513"
+				height="4"
+				radius="0.5"
+				position="-7 2 -15"
+			></a-cylinder>
+			<a-cone
+				color="#00FF00"
+				height="3"
+				radius-bottom="3"
+				position="-7 5 -15"
+			></a-cone>
+
+			<a-cylinder
+				color="#8B4513"
+				height="4"
+				radius="0.5"
+				position="-7 2 -20"
+			></a-cylinder>
+			<a-cone
+				color="#00FF00"
+				height="3"
+				radius-bottom="3"
+				position="-7 5 -20"
+			></a-cone>
+
+			<a-cylinder
+				color="#8B4513"
+				height="4"
+				radius="0.5"
+				position="7 2 -10"
+			></a-cylinder>
+			<a-cone
+				color="#00FF00"
+				height="3"
+				radius-bottom="3"
+				position="7 5 -10"
+			></a-cone>
+
+			<a-cylinder
+				color="#8B4513"
+				height="4"
+				radius="0.5"
+				position="7 2 -15"
+			></a-cylinder>
+			<a-cone
+				color="#00FF00"
+				height="3"
+				radius-bottom="3"
+				position="7 5 -15"
+			></a-cone>
+
+			<a-cylinder
+				color="#8B4513"
+				height="4"
+				radius="0.5"
+				position="7 2 -20"
+			></a-cylinder>
+			<a-cone
+				color="#00FF00"
+				height="3"
+				radius-bottom="3"
+				position="7 5 -20"
+			></a-cone>
+
+			<!-- Prédio -->
+			<a-box
+				color="#CCC"
+				height="60"
+				width="20"
+				position="12 7 -50"
+				material="src: texture/predio.jpg;"
+			></a-box>
+
+			<a-cylinder
+				color="#8B4513"
+				height="2.1"
+				radius="1.2"
+				position="-3 1 -26"
+				material="src: texture/barril.jpg;"
+			></a-cylinder>
+
+			<!-- Personagem -->
+			<a-assets>
+				<a-asset-item
+					id="humano"
+					src="models/humano.gltf"
+				></a-asset-item>
+				<a-asset-image
+					id="textura"
+					src="texture/humano.png"
+				></a-asset-image>
+			</a-assets>
+			<a-entity
+				gltf-model="#humano"
+				scale="0.018 0.018 0.018"
+				position="2 0 -10"
+				material="src: texture/humano.png"
+			></a-entity>
+
+			<a-sky color="#87CEEB" material="src: texture/sky.jpg;"></a-sky>
+		</a-scene>
+	</body>
+</html>
